@@ -53,7 +53,7 @@ class Result extends Calculator{
         document.getElementsByClassName('header')[1].style ='';
         document.getElementsByClassName('header')[1].classList.add('header-div');
         document.getElementById('numOfDep').textContent = this.numOfDep;
-        document.getElementById('incomeV').textContent = `&#8358; ${this.income}`;
+        document.getElementById('incomeV').textContent = `${this.income}`;
         document.getElementById('ageV').textContent = this.age;
         document.getElementById('statusV').textContent = this.status.toUpperCase();
         document.getElementById('genderV').textContent = this.gender.toUpperCase();
