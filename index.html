@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="design.css">
+    <style>
+        .success, .error {
+            color: white;
+            padding: 5px;
+            margin: 5px 0 15px 0;
+            border-radius: .25rem;
+        }
+        .success {
+            background-color:green;
+        }
+        .error {
+            background-color: red;
+        }
+        #second, #loading{
+            display: none;
+        }
+        .header-div{
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+            padding-left: inherit;
+            padding-right: inherit;
+            background-color: #ff8c0042;
+            border-radius: .5rem;
+        }
+    </style>
+    <title>Budget Planer</title>
+</head>
+<body class="container">
+    <div class="cont">
+        <div class="row" id="row">
+            <div class="fullwidth" id="first">
+                <div class="content display spacing center">
+                    <div class="header" >
+                        <h3>BUDGET CALCULATOR</h3>
+                    </div>
+
+                    <div class="form-div">
+                        <form id="calculator">
+                            <div class=" field row1">
+                                <div class="naira-sign">
+                                    <span class="naira">&#8358;</span>
+                                </div>
+                                <input class="input" id="income" type="number" min="1000" placeholder="INCOME" >
+
+                            </div>
+                            <div class="field row2">
+                                <input type="number" id="age" class="input full_length" min="18" max="80" placeholder="AGE" >
+                            </div>
+                            <div class="button" id="button">
+                                <div class="radio row3" id="gender">
+                                    <input type="radio" class="radio_button" name="gender" value="male" id="genderM">
+                                    <label for="genderM" class="checkbox_label">MALE</label>
+                                </div>
+                                <div class="radio row3">
+                                    <input type="radio" class="radio_button" name="gender" value="female" id="genderF">
+                                    <label for="genderF" class="checkbox_label">FEMALE</label>
+                                </div>
+                            </div>
+                            
+                            <div class="field row4">
+                                <select name="status" class="input full_length" id="status">
+                                    <option value="" disabled selected>Status</option>
+                                    <option value="single">SINGLE</option>
+                                    <option value="married">MARRIED</option>
+                                    <option value="divorced">DIRVORCED</option>
+                                </select>
+                            </div>
+                            <div class="field row5">
+                                <input type="number" id="dependents" class="input full_length" min="1" max="5" placeholder="NUMBER OF DEPENDENTS">
+                            </div>
+                            <div class="field">
+                                <input type="submit" id="submit" class="input_button btn" value="SUBMIT">
+                                <input type="submit" class="input_button btn" id="loading" value="loading...">
+                                
+                            </div>
+                        </form>
+                        
+                    </div>
+                </div>
+            </div>
+            <div id="second" class="fullwidth fullTable">
+                <div id="result" class="content display spacing">
+                    <div class="header" style="text-align: center;"><h2>Results</h2></div>
+                    <!-- <div class="previous">
+                        <div class="left">
+                            <p>Number of Dependents: <span id="numOfDep"></span></p>
+                            <p>Income: <span id="income"></span></p>
+                                
+                        </div>
+                        <div class="right">GO BACK</div>
+                        
+                    </div> -->
+                    <div class='menu'>
+                        <div class='date'><input type="submit" id="submitB" class="input_button btn" value="Previous Page"></div>
+                        <div class='links'>
+                            <div class='signup'>Age:<span id="ageV"></span></div>
+                            <div class='login'>Gender:<span id="genderV"></span></div>
+                            <div class='login'>Status:<span id="statusV"></span></div>
+                            <div class='login'>Dependents:<span id="numOfDep"></span></div>
+                            <div class='login'>Income:<span id="incomeV"></span></div>
+                        </div>
+                    </div>
+                    <div class="table">
+                        <table class="background" id="table-conatiner">
+                            <thead>
+                                <tr class="table-header">
+                                    <th></th>
+                                    <th>Category</th>
+                                    <th>Percentage</th>
+                                    <th>#</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tbody">
+                                
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- <script src="form_validation.js"></script> -->
+    <script src="app.js"></script>
+    
+</body>
+</html>
