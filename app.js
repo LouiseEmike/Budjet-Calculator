@@ -180,14 +180,14 @@ function form(a){
         
     if(age ==='' || gender ==='' || status==='' || numOfDep === '' || income===''){
         ui.showAlert('Please fill in all fields', 'error');
-        console.log(age+' '+gender+' '+status+' '+income+' '+numOfDep);
+        // console.log(age+' '+gender+' '+status+' '+income+' '+numOfDep);
     }
     else{
         // console.log(typeof age);
         // ui.showAlert('Successfully Collected', 'success');
         ui.clearFields();
         const result = new Result(income, age, gender, status, numOfDep);
-        console.log(result);
+        // console.log(result);
         result.display();
         result.populateTableRows();
         
