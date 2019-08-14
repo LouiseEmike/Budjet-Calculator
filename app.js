@@ -5,16 +5,18 @@
         this._gender = gender;
         this._status = status;
         this._numOfDep = numOfDep;
+        this.randomNumber;
+        this.categories;
     }
     // getUserInputs(){
     //     return [this._income, this._age, this._gender, this._status,];
     // }
     
-    getRandomNumber(){
+    get randomNumber(){
         return Math.round(Math.random() * (15 -10 + 1) + 10);
     }
 
-    getCategories() {
+    get categories() {
         return ['Tithe','Housing', 'Transportation', 'Food', 'Dependents', 'Entertainment', 'Loans', 'Savings', 'Groceries', 'Vacation', 'Projects', 'Gym', 'Musical Instruments', 'Education', 'Hunting'];
       
     }
@@ -83,10 +85,10 @@ class Result extends Calculator{
         
         let tbody = document.querySelector('#tbody');
         
-        let length = this.getRandomNumber();
+        let length = this.randomNumber;
         console.log(length);
         let sumI = 0, percentI = 0;
-        this.getCategories().forEach((item, index) =>{
+        this.categories.forEach((item, index) =>{
             let percent;
             if( index < length ){
                 if(this._numOfDep < 3){
